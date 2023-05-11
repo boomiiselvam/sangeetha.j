@@ -1,0 +1,194 @@
+Millions of lines of code are written every single day using an uncountable number of different coding techniques.
+
+However, to secure code maintenance and reusability, written code must be readable for fellow coders.
+
+Unfortunately, writing meaningful and reusable code is not a no-brainer. Especially in the early software development stages, software developers create unusable and incomprehensible code.
+
+A best practice to avoid the arbitrary creation of low-quality program code is to follow code conventions.
+
+Let’s dive into 7 easy tips to write readable and reusable code.
+
+Define Meaningful Variable Names
+The starbucks logo symbolizes meaningful variable names
+Photo by Lingchor on Unsplash
+First, defining meaningful variable names must be internalized.
+
+After working for several years as a software developer, I still see people naming variables with single letters!?
+
+In contrast, defining readable variable names could be as easy as brushing teeth:
+
+Use a variable name that best describes itself or its purpose.
+Use snake case or camel case as naming conventions.
+To demonstrate the differences between indefinable and meaningful variable names, see the coffee example:
+
+# Indefinable variable names
+c = 16
+whpd = 8
+cph = c / hpd
+
+# Meaningful variable names
+coffees = 16
+workHoursPerDay = 8
+coffeesPerWorkHour = coffees / workHoursPerDay
+Define Reused Constants
+Use constants to define multiple used values with the same meaning in one place.
+
+I see many programs with random values included, where it’s not defined, what they are about.
+
+There is also a syndrome of using “obvious”, unchanging values directly in the code without defining specific variables for them.
+
+The consequences are difficult readability, increased maintenance work, and error-proneness.
+
+Let’s again illuminate the problem with important activities during work:
+
+# Without constant
+coffees = 16
+toiletBreaks = 9
+
+coffeesPerWorkHour = coffees / 8
+toiletBreaksPerWorkHour = toiletBreaks / 8
+
+# Including constant definition
+WORKHOURSPERDAY = 8
+
+coffees = 16
+toiletBreaks = 9
+
+coffeesPerWorkHour = coffees / WORKHOURSPERDAY
+toiletBreaksPerWorkHour = toiletBreaks / WORKHOURSPERDAY
+As this simple example shows, it is not immediately clear what the value “8” means without defining a constant for it.
+
+Additionally, if your work hours per day are changing, e.g. due to a job change, you must change every single value independently. That maintenance work might cause problems in larger programs.
+
+Ensure One-purpose Functions
+Medical capsules lay on a table symbolizing encapsulation of functionality in one-purpose functions.
+Photo by Yvette S on Unsplash
+Functionality encapsulation is an important coding skill to hold the readability and simplicity of program code.
+
+Therefore, the use of function definitions to reuse functionality at different program places is a common and fortunately applied coding habit.
+
+However, many functions cover more functionality than they express.
+
+Possible causes that lead to functions covering multiple functionalities are:
+
+File reads/writes
+Preprocessing calculations
+Formatting activities
+Separate different functionalities by defining one-purpose functions.
+
+The strict functionality encapsulation leads to increased code readability, enhanced function reusability, and decreased maintenance.
+
+Let’s get back to the coffee:
+
+# Multi-purpose function
+def calcCoffeePerWorkHour(filename: str, workHoursPerDay: int) -> float:
+  with open(filename, "r") as f:
+    coffees = int(f.readline())
+
+  return coffees / workHoursPerDay
+
+# Single-purpose functions
+def getCoffeesToday(filename: str) -> int:
+  with open(filename, "r") as f:
+    return int(f.readline())
+
+def calcCoffeePerWorkHour(filename: str, workHoursPerDay: int) -> float:
+  coffees = getCoffeesToday(filename)
+  return coffees / workHoursPerDay
+Avoid redundancy
+We all love copy & paste.
+
+But redundant code is inefficient and hard to maintain.
+
+Invest a little bit more time in the initial functionality implementation to avoid a ton of work afterward.
+
+Let’s use our coffee example to demonstrate redundancy:
+
+# Redundant functionality
+def calcCoffeePerWorkHour(coffees: int, workHoursPerDay: int) -> float:
+  return coffees / workHoursPerDay
+
+def calcCoffeePerWorkDay(coffees: int, workDaysPerWeek: int) -> float:
+  return coffees / workDaysPerWeek
+
+# Functionality encapsulation
+def calcCoffeePerUnit(coffees: int, unit: int) -> float:
+  return coffees / unit
+
+workHoursPerDay = 8
+workDaysPerWeek = 5
+
+coffeesPerWorkHour = calcCoffeePerUnit(coffees, workHoursPerDay)
+coffeesPerWorkDay = calcCoffeePerUnit(coffees, workDaysPerWeek)
+Define Docstrings
+The Hollywood sign symbolizes the description of programming entities with docstrings to know their purpose and usage
+Photo by Nathan DeFiesta on Unsplash
+To reliably use classes and functions for their expected purpose, a description of their purpose and use is necessary.
+
+Docstrings are used to gain exactly such information.
+
+Additionally, your IDE might show your docstring definitions, e.g. of a function, at the function call. This ensures the users to exactly know what the function’s purpose is while using it.
+
+def calcCoffeePerUnit(coffees: int, unit: int) -> float:
+  """
+  Calculate the coffee consumption per time unit.
+
+  Parameters:
+    coffees (int): Consumed coffees.
+    unit (int): Time unit of consumption.
+  Returns:
+    float: Consumed coffees per time unit.
+  """
+  return coffees / unit
+Add Meaningful Code Comments
+Docstrings provide information about the purposes and usages of reusable coding entities, like functions and classes.
+
+Additionally, explanatory purpose descriptions must also be included during the functionality implementation.
+
+In general, commenting code is a well-established habit of programmers. However, most comments are repetitions of the code and are valueless.
+
+Meaningful code comments consist of
+
+descriptions of the implementation purpose,
+explanations why the implementation is like it is,
+additional information to better understand the code.
+Define Parameter Types
+The Jaguar F-Type stands on the road representing the defintion of parameter types for better readability.
+Photo by Michael Heuser on Unsplash
+Defining types sucks. I know it’s exhausting and boring work.
+
+However, complex projects are generally difficult to understand in the first place. And the lack of variable and parameter type definitions even increases their difficult comprehensibility.
+
+If you are a non-Python programmer, you might ask yourself what the hell I’m even talking about. But in Python, you don’t need to define variable types.
+
+But you can! And should!
+
+Make the life of your code reviewers or your future self easier and put in the work. Your code readability will increase significantly.
+
+Additionally, you will gain control over types and better manage which type of variables should be used at which place in your implementation.
+
+Let’s use the coffee example one last time.
+
+# No type definitions
+def calcCoffeePerUnit(coffees, unit):
+  
+  return coffees / unit
+
+# Parameter types and return types are undefined.
+# Function usage has increased difficulty.
+
+# Type definitions
+def calcCoffeePerUnit(coffees: int, unit: int) -> float:
+  
+  return coffees / unit
+
+# It's clear what types of variables are used as parameters.
+# Full control over which variables are possible parameter values.
+# Returned type is comprehensible and avoids upcoming type problems.
+Conclusion
+Readability and reusability are important characteristics of meaningful code considering the immense amount of code being produced every day.
+
+Coding meaningful and clean code is not a no-brainer. However, following simple rules and coding tips can significantly improve your code quality.
+
+Sometimes, little changes make a huge difference. And that’s 100% the case for programming.
+
