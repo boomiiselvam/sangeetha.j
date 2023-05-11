@@ -1,0 +1,62 @@
+How to Create an IBM Cloud Account
+日本語; Português;
+
+The following guide will walk you through the steps required in order to create a new IBM Cloud account.
+
+Prerequisites
+IBM Cloud Feature Code - A 32-character alphanumeric IBM Cloud Feature Code is required in order to open a new IBM Cloud trial account. Participants of IBM SkillsBuild Software Downloads may request a code using these instructions. All others must get their code from the class or event organizer.
+
+Notice
+Please do not provide credit card information on IBM Cloud unless you are actively upgrading to a paid account and are willing accepting to be billed for consumed services.
+
+Step 1 - Visit cloud.ibm.com in a web browser
+Step 1
+
+Step 2 - Click on Create an account
+Step 2
+
+Step 3 - Enter a valid email address and password. Click Next to proceed.
+Step 3
+
+Step 4 - You will be emailed a verification code. Please check your email inbox and enter the 7-digit verification code you received (example below). Click Next to proceed.
+Step 4a
+
+Step 4b
+
+Step 4c
+
+Step 5 - Provide your First name, Last name and Country or region. Click Next to proceed.
+Step 5
+
+Step 6 - Complete the Account notice and click on Continue to proceed.
+Step 6
+
+Step 7 - Complete the Account privacy notice and click on Continue to proceed.
+Step 7
+
+Step 8 - At the Verify identity screen, click on the Register with a code option.
+Step 8
+
+Notice
+Please do not provide credit card information on IBM Cloud unless you are actively upgrading to a paid account and are willing accepting to be billed for consumed services.
+
+
+Step 9 - Enter your 32-character IBM Cloud Feature Code in the Enter code text box. Click Create account to proceed.
+Note: Students and educators at degree-granting accredited academic institutions may obtain an IBM Cloud Feature Code through IBM SkillsBuild Software Downloads. All others should receive an IBM Cloud Feature Code from their event coordinator.
+
+Step 9a
+
+Step 9b
+
+Step 10 - Success!
+Step 10
+
+Troubleshooting
+Q: I received an error message with code when applying the IBM Cloud Feature Code. What should I do?
+A: Please contact the code provider for assistance. You will most likely need a replacement code.
+
+Q: While registering for an IBM Cloud account I provided a credit card. Can I undo this?
+A: No, entering a credit card creates a Pay-As-You-Go account and enables you to use both free and paid services. This cannot be undone. Any charges from paid services will be billed to the credit card on file. We recommend setting up spending notifications to help avoid unwanted charges.
+
+Q: My IBM Cloud trial account has expired and is now asking me to upgrade and provide a credit card. What are my options?
+A: You may upgrade your account to reactivate and continue using your existing account or create a brand new account using a new email address.
