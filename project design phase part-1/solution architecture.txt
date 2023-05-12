@@ -1,0 +1,48 @@
+Solution architecture
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+From Wikipedia, the free encyclopedia
+
+Sketch of architecture types
+Solution architecture, term used in information technology with various definitions such as; "A description of a discrete and focused business operation or activity and how IS/IT supports that operation".[1]
+
+Definitions
+The Open Group's definition of Solution Architecture, as provided above, is accompanied by the following three from Scaled Agile, Gartner and Greefhorst/Proper. It is worth noting that the Open Group does not recognize the role "Solution Architect" in its TOGAF skills framework whilst Glassdoor advertised 55,000 Solution Architect roles in August 2020. [2]
+
+Scaled agile (2020) Solution Architect/Engineering is responsible for defining and communicating a shared technical and architectural vision across a "Solution Train" to help ensure the system or Solution under development is fit for its intended purpose.[3]
+Gartner (2013) A solution architecture (SA) is an architectural description of a specific solution. SAs combine guidance from different enterprise architecture viewpoints (business, information and technical), as well as from the enterprise solution architecture (ESA).[4]
+Greefhorst and Proper (2013) An architecture of a solution, where a solution is a system that offers a coherent set of functionalities to its environment. As such, it concerns those properties of a solution that are necessary and sufficient to meet its essential requirements[5]
+A typical property of Solution Architecture, in contrast to other flavours of Enterprise Architecture, is that it often seeks to define a solution within the context of a project or initiative.[6] This close association to actual projects and initiatives means that solution architecture is the means to execute or realise a technology strategy.
+
+Coverage
+According to Forrester Research, Solution Architecture is one of the key components by which Enterprise Architecture delivers value to the organization. It entails artifacts such as; solution business context, solution vision and requirements, solution options (e.g. through RFIs, RFPs or prototype development) and an agreed optimal solution with build and implementation plans ("road-map").[7]
+
+Since The Open Group does not recognize a unique Solution Architect role a relevant link for these mentioned artifacts can be to the Business and Systems Analyst roles. It is also worth reminding that The Open Group does define Solution Architecture as something larger than Forrester (see aforementioned definition).
+
+Then on, according to the 2013 paper published by the Federation of Enterprise Architecture Professional Organizations, Solution Architecture includes business architecture, information architecture, application architecture, and technology architecture operating at a tactical level and focusing on the scope and span of a selected business problem. In contrast, enterprise architecture, which also includes the aforementioned four types of architecture, operates at the strategic level and its scope and span is the enterprise rather than a specific business problem.[8][9]
+
+See also
+Architecture patterns, hereunder enterprise architecture (EA) reference architectures
+Segment architecture
+References
+ The Open Group. Architecture Framework TOGAF™ Version 9.2 Definitions page https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap03.html
+ https://www.glassdoor.com/Job-Descriptions/Solution-Architect.htm and https://www.glassdoor.com/Job/solution-architect-jobs-SRCH_KO0,18.htm, The job related site Glassdoor, August 2020
+ "Safe Agile on Solution Architect role". Scaled Agile Framework. Retrieved 3 January 2023.
+ Gartner, "IT Glossary," at gatner.com, 2013. Accessed 8 March 2015.
+ Danny Greefhorst & Erik Proper, Architecture Principles: The Cornerstones of Enterprise Architecture, 2011. p. 25
+ "What is Solution Architecture? | Orbus Software". www.orbussoftware.com. Retrieved 2020-11-24.
+ Forrester Research, Inc., (2012), Solution Architecture Toolkit: Overview
+ FEAPO, "A Common Perspective on Enterprise Architecture" in: Architecture and Governance Magazine, 2013(11).
+ Mistrík Ivan, Antony Tang, Rami Bahsoon, Judith A. Stafford. (2013), Aligning Enterprise, System, and Software Architectures. Business Science Reference.
+Further reading
+Banerjee, Jaidip, and Sohel Aziz. "SOA: the missing link between enterprise architecture and solution architecture." SETLabs briefing 5.2 (2007): 69-80.
+Chen, Graham, and Qinzheng Kong. "Integrated management solution architecture." Network Operations and Management Symposium, 2000. NOMS 2000. 2000 IEEE/IFIP. IEEE, 2000.
+Gulledge, Thomas, et al. "Solution architecture alignment for logistics portfolio management." International Journal of Services and Standards 1.4 (2005): 401-413.
+Shan, Tony Chao, and Winnie W. Hua. "Solution architecture for n-tier applications." Services Computing, 2006. SCC'06. IEEE International Conference on. IEEE, 2006.
+Slot, Raymond, Guido Dedene, and Rik Maes. "Business value of solution architecture." Advances in Enterprise Engineering II. Springer Berlin Heidelberg, 2009. 84-108.
