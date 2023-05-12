@@ -1,0 +1,135 @@
+Software performance testing requirements and prerequisites
+
+Just because software passes functional tests doesn't mean it works. Dig into stress, load, endurance and other performance tests, and their prerequisites and requirements.
+Stephen J. Bigelow
+By
+Stephen J. Bigelow, Senior Technology Editor
+Published: 02 Jul 2020
+Software performance testing isn't about features or functionality. Performance tests measure the operational characteristics of a software product. This type of software testing relies on simulated load conditions that closely mimic the production environment.
+
+
+Performance testing should be an integral part of a product's testing regimen, right from the beginning. Software can succumb to a wide range of performance problems that impact user acceptance. Software testing teams can find and remediate issues as early as possible with regular testing throughout the application lifecycle.
+
+Performance testing should capture metrics on an application to ensure that it works within acceptable parameters, including:
+
+speed
+response times
+latencies
+resource usage
+reliability
+Once you understand the basics and common types of tests to run, take a close look at performance testing prerequisites and requirements, including common metrics and test development.
+
+Identify performance requirements
+Imagine a web browser that takes 20 minutes to render a webpage, or a streaming platform that renders video perfectly but loses connectivity every three minutes. The software functionality works -- but that kind of performance is not good enough for real users.
+
+Software must work well and deliver acceptable levels of performance. The purpose of performance testing is to check and validate an application's capacity and capabilities.
+
+Software performance comes from its design -- i.e., its coding and application architecture efficiency. The operating environment, which includes computing resources such as the network and storage hardware, also affects performance. To gauge software performance, teams must run the build in a dedicated test environment that closely resembles the production systems, including hardware types and traffic levels.
+
+As a prerequisite of performance testing, estimate where issues might occur before you design or test the software. Here are four performance criteria likely to be sources of concern.
+
+Startup time or load time. All software requires a finite amount of time to load and begin operation. End users typically see loading screens or animated cursors while the software loads or starts up. Complex programs can require extensive setup, configuration and internal testing before users can get to work. For example, the software might check on dependencies with other software and verify files exist. These tasks add to the load time. Startup times should be as short as possible -- mobile applications commonly load within a few seconds. However, it's not uncommon for some enterprise applications to experience load times longer than one minute.
+
+Response time or latency. The response time, also referred to as latency, is the delay between when the user enters input and when the software acts upon that information. Ideally, software response times should be virtually imperceptible to end users. Imagine how frustrating it would be if keystrokes took 10 seconds to appear in a dialog box. Dependencies can cause long response times, particularly when hardware issues like an underbuilt network exist.
+
+Limited load or poor scalability. Enterprise client/server applications should handle a finite number of simultaneous users without software performance degradation. Scalability helps ensure the application has the resources to support the expected number of users. Performance testing evaluates the software under various user load conditions. Inadequate resources such as insufficient server compute power can cause poor scalability. But software performance is resources plus design, and many scalability problems result from poor application architecture.
+
+Bottlenecks. Every application accesses a finite amount of resources, such as processing power, memory space, network bandwidth and throughput, disk storage capacity and I/O, and operating system services. Bottlenecks are resource shortages that occur as a result of software design problems.
+
+Applications use those resources to execute instructions. Some application designs make heavy demands of specific resources. An app might monopolize memory or CPU, refuse to return freed memory or perform excessive disk access operations. Bottlenecks cause contention between applications that share resources, and slow software performance.
+
+Types of performance tests
+Given the variety of potential performance problems that can plague software, diverse performance tests can help QA teams evaluate specific characteristics. The top five performance testing types are load, stress, endurance, spike and dependency tests.
+
+Load tests. Application load tests generally measure data movement, also called throughput, with a certain number of simultaneous users. Load testing helps verify that the software performs acceptably under typical conditions. The work itself is usually not relevant. The goal of load testing is to ensure that key performance metrics, such as data throughput per second or disk access per second, remain acceptable as multiple users engage with the software in a normal manner. If the required number of concurrent users significantly affects performance metrics, the load test fails. Developers can then remediate issues in subsequent builds, such as adjusting load balancing specifications.
+
+Stress tests. A variation of load testing, stress testing subjects the software to excessive load conditions. Stress testing should reveal software performance issues in high-traffic or data-processing conditions. Some stress tests intentionally increase load conditions until the software fails. When developers understand when and how software fails, they can improve its reliability.
+
+Endurance tests. These performance tests are basically load tests QA professionals perform over an extended period of time. The goal of endurance testing, also called soak testing, is to verify that the software's performance characteristics do not change over time. Endurance tests catch flaws such as a memory hole that results in a shortage over time. Performance conditions like memory holes might not arise under short-term load testing.
+
+Spike tests. Load, endurance and stress tests typically use relatively static conditions. However, real-world software often experiences erratic and unpredictable user load changes. Spike testing simulates these sudden changes in user load to measure the software's response.
+
+Dependency tests. Software rarely exists by itself. It relies on interoperability with other applications, such as middleware, or back-end applications like databases. Poor dependency management can drag down software performance. For example, a well-designed enterprise application might perform poorly when the integrated customer database is under heavy load by multiple other applications. Dependency tests still evaluate performance under a load, however, the technique applies that load to the dependencies, not the software. For example, the software testing team might use different data sets and volumes with a database, and see how the application that relies on that information performs.
+
+Prerequisites for performance testing
+Successful software performance testing doesn't happen by accident. Developers and QA staff must address performance testing requirements before assessing the software.
+
+Here are five performance testing prerequisites:
+
+determine a suitable software candidate;
+clarify performance goals;
+create meaningful test cases;
+use suitable performance testing tools; and
+mimic the production environment.
+Assess each of these performance testing prerequisites to develop an approach that works for a given software project.
+
+Determine a suitable software candidate. Not every software development project will require the same level of testing. Thus, developers should carefully choose candidates for the process. Not all applications or software necessarily need performance tests. All testing takes time and effort. Load testing a vital client/server system protects the company from risk, but the same tests on a simple tool might not justify the investment. For example, you wouldn't load test a calculator app. Consider the requirements and goals of a software project, and determine early on whether to apply performance testing. As a general rule, if the software project must meet specific performance specifications, such as supporting a minimum number of potential users, then performance testing is required.
+
+Clarify performance goals. Establish a comprehensive set of goals and requirements for performance testing. Define the performance testing parameters, and what constitutes acceptance criteria for each one. If you neither know what to test for, nor what the desired outcome should be, then performance testing is a waste of time. For example, if the goal of a project is to develop a shopping website, you might require performance testing for page load times to ensure fast site response to meet the expected user experience online. Software stakeholders might require load times under a half-second; such a metric typically needs validation through performance testing before the software is an acceptable release candidate.
+
+Create meaningful test cases. Performance testing measures software in operation. Thus, you should establish prerequisites for performance testing goals. Here are some common examples of performance test cases:
+
+Verify the software can support a peak load of 2,000 concurrent users without malfunctioning.
+Software response time should not exceed four seconds with a peak load of 2,000 simultaneous users.
+Document the response times of the software under low, average and heavy load conditions.
+Keep software response time within two seconds when network connectivity is slow.
+Stress test the software to determine the total number of concurrent users or the traffic level at which the software will malfunction.
+Document the software's processor load and memory usage under peak load conditions of 2,000 simultaneous users.
+Evaluate the database response time when the software reads or writes 1,000 records simultaneously.
+In practice, project stakeholders or experienced developers provide numbers to qualify relative terms like significant user load or expected load.
+
+Select performance testing tools. Software performance testing typically requires one or more related testing tools or suites. Performance testing tools offer various benefits. Testing teams use tools to create realistic input for the software. Tools can help teams establish, track and report key performance testing metrics, such as processor load and memory usage. A myriad of performance testing tools exist, such as:
+
+HP LoadRunner
+NeoLoad
+WebLOAD
+Apache JMeter
+IBM Rational Performance Tester
+LoadNinja
+Silk Performer
+Gatling
+Flood
+Mimic the production environment. To yield meaningful performance testing results, the QA team should assess software in a testing environment that is as close to the production setup as possible. This environment includes the software, hardware resources and network configurations. For example, when you run an application on a developer's laptop with a Wi-Fi network connection, the software might perform differently than when hosted on an enterprise-grade server with 10-gigabit Ethernet connectivity. Dependencies also affect performance test accuracy. Check the version of the server OS and database, for example. Document the test conditions and tool configurations to make performance testing repeatable and easy to validate.
+
+Performance testing metrics
+What exactly does performance testing measure? There are countless possible performance testing metrics, depending on the nature and complexity of the software under test.
+
+For general-purpose performance testing, here are some metrics to consider:
+
+Committed memory. The amount or percentage of virtual memory being used.
+Disk queue length. The total number of read/write requests waiting for disk access. A larger queue number means the disk is busy, and a disk failure or software crash can result in data loss.
+Disk utilization. The amount or percentage of time a disk spends working on read/write requests; a general measure of disk load.
+Hit ratios. The ratio of data found in cache versus data the application requests from the disk. A high hit ratio means data is often found in cache, which can improve performance. A lower hit ratio means the software relies more on disk access, which is slower than cache access and therefore diminishes performance.
+Hits per second. The number of requests made to a web server per second. A higher number represents more traffic, and better performance.
+Interrupts per second. The rate of hardware interrupt requests the processor handles. High interrupt rates impact performance, as the processor is constantly distracted by servicing interrupts.
+Memory utilization. The amount or percentage of memory that working processes claim or lock; a general measure of memory load.
+Network queue length. The number of packets waiting to be sent to the network. A larger queue number means the network, more specifically the local network interface, is busy.
+Network utilization. The amount or percentage of available network interface bandwidth that is actively exchanging traffic (in bytes per second); a general measure of network load.
+Page faults per second. The rate at which requested data is not found in memory, which prompts the system to look for the data cached to disk.
+Pages per second. The number of memory pages that are cached to or read from disk, usually when memory falls short. A large number of pages per second means the software is frequently looking for data that is not cached in memory, either due to limited memory resources or inefficient software design.
+Processor utilization. The amount or percentage of time the processor spends working on active threads or processes. This metric is a general measure of processor load.
+Response time. The latency between when software receives a request and the start of its response. Smaller response times suggest better performance.
+Throughput. The rate at which software requests are made and completed, typically per second. Lower throughput numbers represent poorer performance.
+The test environment heavily influences the final performance testing metrics. Variable traffic or data sets can return different test results. For example, when you run tests that only make simple requests to locally cached data, the results look artificially good; these performance results won't reflect the software's real-world capabilities, thus rendering the performance tests invalid. Perform results analysis to make sure you receive accurate and helpful data.
+
+Refine the performance testing plan
+The creation of performance tests is equal parts art and science. The actual performance testing process relies on a combination of techniques. For example, testers frequently use scripts and record-and-playback tools to simulate user behaviors like menu selections and checkout. These methods often pull in established data sets, such as copies of actual databases from the production system, to provide real-world performance test data for the software to work with.
+
+Also, performance tests can take multiple tools. Some tools specialize in a type of performance testing activity, such as scaling network traffic loads or scalability testing.
+
+These techniques require a clear performance testing strategy. No two performance testing plans are identical; the test plan or technique a QA team chooses must reflect the goals of that test cycle.
+
+These performance criteria -- the design, normal and peak loads, system resources, dependencies, workload characteristics and time -- are prerequisites for performance testing and should be part of any strategy.
+
+Software architecture. Test developers must understand the systems, interfaces, modules and other parts of the software. Many system components and different ways to use the software exist. Set a test scope to narrow the focus to examine the most sensitive or important parts of the software. Consider interface testing as an example. One round of tests might focus on stress testing an API to determine the software's ability to handle requests and responses at busy times.
+
+Normal, peak and break. A major part of performance testing is the user load, whether normal, peak or excess. Network traffic, concurrent users, and requests and responses all contribute to the load. To determine normal load on existing software, take an average from a given period of operation, such as the last six months. Peak load might be derived from the highest usage the team recorded in the last year. Excess load should represent typical usage patterns but at a volume that degrades performance.
+
+Hosting resources. Testers must have a comprehensive understanding of the underlying system hardware and network. The operating system, server resources, network components and other elements of the infrastructure will impact performance. For example, if the software requires functionality in the OS that is not present, or there's an incompatible version in the test platform OS, the software might perform poorly -- or not perform at all. Understand the underlying environment to ensure all software requirements and dependencies are in place.
+
+Spend the most time testing the performance of tasks that the software performs most often.
+Dependency requirements. Enterprise-class software requires access to middleware and back-end processes. Performance testing plans should consider all dependencies, as well as account for the delays or latencies those processes impose during normal and peak loads. For example, if the software accesses a database application, performance tests might include a single measurement to gauge the actual database response time versus the software's total response time to the query. This measurement enables testers to distinguish software code or resource level issues from dependency issues.
+
+Workload composition. Software performs a multitude of functions, but it typically doesn't perform them all at once, or all the time. Design tests to reflect the workload of each software function. For example, if the team expects the software under test to spend 5% of its active time handling logins and user authentication, 50% of that time processing data sets, 10% generating reports, 20% doing searches and 15% in other activities, then tests should reflect that distribution of work. Spend the most effort testing the performance of high-use tasks.
+
+Time available. The complexity, type and scope of performance testing dramatically affect the amount of time spent on the task. Some performance tests require more time than others. For example, it takes mere minutes to check for CPU bottlenecks under normal and peak loads, but endurance tests might take days. Testing time affects development schedules and iteration cycles.
