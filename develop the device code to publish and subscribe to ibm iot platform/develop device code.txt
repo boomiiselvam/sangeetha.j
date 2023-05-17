@@ -1,0 +1,144 @@
+string host = "login.microsoftonline.com";
+string tenant = "your-tenant-id-here";
+string resource = "https://graph.windows.net";
+string clientId = "your-app-client-id-here";
+string deviceCodeUri = string.Format(CultureInfo.InvariantCulture, "https://{0}/{1}/oauth2/devicecode", host, tenant);
+using(var client = new HttpClient())
+{
+    var content = new FormUrlEncodedContent(new Dictionary<string, string>
+    {
+        ["resource"] = resource,
+        ["client_id"] = clientId
+    });
+
+    var req = new HttpRequestMessage(HttpMethod.Post, deviceCodeUri);
+    req.Content = content;
+    var res = await client.SendAsync(req);
+
+    string json = await res.Content.ReadAsStringAsync();
+
+    var codeResponse = JsonConvert.DeserializeObject<DeviceCodeResponse>(json);
+}
+So we only need two parameters, the app's client id, and the resource. The resource is the identifier for the API we want to use. In the case of Azure AD Graph API, it is https://graph.windows.net.
+
+Here is how the raw HTTP request looks like:
+
+POST https://login.microsoftonline.com/52a7d760-d554-4751-bb71-cc3585633f2e/oauth2/devicecode HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Host: login.microsoftonline.com
+Content-Length: 89
+Expect: 100-continue
+Connection: Keep-Alive
+
+resource=https%3A%2F%2Fgraph.windows.net&client_id=b0aebd14-7a8e-4114-ba5b-45874f5e9aa8
+And here is the response:
+
+{
+    "user_code":"BXMAAAAA",
+    "device_code":"BAQAB...",
+    "verification_url":"https://aka.ms/devicelogin",
+    "expires_in":"900",
+    "interval":"5",
+    "message":"To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code BXMAAAAA to authenticate."
+}
+So what are those returned values?
+
+User code: the code the user must input in their browser
+Device code: used by the app to check authentication status
+Verification URL: The URL the user should open in a browser
+Expires in: Time in seconds until the device code and user code expire
+Interval: Polling interval in seconds your app should use
+Message: A friendly message that you can show to the user
+So now we can show the message to the user:
+
+To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code BXMAAAAA to authenticate.
+
+Now while the user is opening the browser on their computer or phone, the app will need to start polling. Here is how it looks like in my console app:
+
+TimeSpan pollingInterval = TimeSpan.FromSeconds(int.Parse(codeResponse.Interval));
+DateTimeOffset codeExpiresOn = DateTimeOffset.UtcNow.AddSeconds(int.Parse(codeResponse.ExpiresIn));
+TimeSpan timeRemaining = codeExpiresOn - DateTimeOffset.UtcNow;
+
+string tokenUri = string.Format(CultureInfo.InvariantCulture, "https://{0}/{1}/oauth2/token", host, tenant);
+
+TokenResponse tokenResponse = null;
+
+//Loop until codes expire
+while(timeRemaining.TotalSeconds > 0)
+{
+    var tokenRequest = new HttpRequestMessage(HttpMethod.Post, tokenUri)
+    {
+        Content = new FormUrlEncodedContent(new Dictionary<string, string>
+        {
+            ["grant_type"] = "device_code",
+            ["resource"] = resource,
+            ["code"] = codeResponse.DeviceCode,
+            ["client_id"] = clientId
+        })
+    };
+
+    //Same HttpClient as before, this code is inside the same using block
+    var tokenRes = await client.SendAsync(tokenRequest);
+
+    string tokenJson = await tokenRes.Content.ReadAsStringAsync();
+    var tempTokenResponse = JsonConvert.DeserializeObject<TokenResponse>(tokenJson);
+
+    if(tokenRes.StatusCode == HttpStatusCode.OK)
+    {
+        //We got a successful response
+        tokenResponse = tempTokenResponse;
+        break;
+    }
+
+    //The authorization_pending error is completely normal until user authenticates
+    if(tempTokenResponse.Error != null && tempTokenResponse.Error != "authorization_pending")
+    {
+        //Something went wrong
+        throw new Exception("Token acquisition failed: " + tempTokenResponse.Error);
+    }
+
+    await Task.Delay(pollingInterval);
+    timeRemaining = codeExpiresOn - DateTimeOffset.UtcNow;
+}
+We specify the grant type device_code, tell it the resource we want to use (identifier for the API), and pass the app's client id and the device code received earlier.
+
+We then poll the token endpoint until we either receive a 200 OK, or receive an error other than "authorization_pending", which is completely normal until the user logs in.
+
+Here is what a raw polling request looks like:
+
+POST https://login.microsoftonline.com/52a7d760-d554-4751-bb71-cc3585633f2e/oauth2/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Host: login.microsoftonline.com
+Content-Length: 303
+Expect: 100-continue
+
+grant_type=device_code&resource=https%3A%2F%2Fgraph.windows.net&code=BAQAB&client_id=b0aebd14-7a8e-4114-ba5b-45874f5e9aa8
+Until the user authenticates, the response will have a 400 Bad Request status code, along with a response like this:
+
+{
+    "error":"authorization_pending",
+    "error_description":"AADSTS70016: Pending end-user authorization.\r\nTrace ID: 81673608-fabb-4f69-8aa3-96bc32830c00\r\nCorrelation ID: 11a0f545-abb1-417d-b2eb-1243e8797b01\r\nTimestamp: 2018-02-27 19:05:03Z",
+    "error_codes":[70016],
+    "timestamp":"2018-02-27 19:05:03Z",
+    "trace_id":"81673608-fabb-4f69-8aa3-96bc32830c00",
+    "correlation_id":"11a0f545-abb1-417d-b2eb-1243e8797b01"
+}
+After the user authenticates, we get a 200 OK with a body like this:
+
+{
+    "token_type":"Bearer",
+    "scope":"User.Read",
+    "expires_in":"3599",
+    "ext_expires_in":"0",
+    "expires_on":"1519761916",
+    "not_before":"1519758016",
+    "resource":"https://graph.windows.net",
+    "access_token":"eyJ0eXA...",
+    "refresh_token":"AQABAAAAwjnFIAA...",
+    "id_token":"eyJ0eXAiOiJKV1Qi..."
+}
+And now we can go ahead and call the API we wanted using the access token.
+
+What about if I want to call another API? Well, we can use the refresh token to get access tokens for other APIs. As well as allowing you to get a new access token (and refresh token) for the first API, you can also get access tokens for other APIs your app has access to.
+
+The Id token gives you information on the user.
