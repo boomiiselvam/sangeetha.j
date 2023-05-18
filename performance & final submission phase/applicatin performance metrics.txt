@@ -1,0 +1,48 @@
+Application performance metrics are important for deciphering the extent to which an application actually helps the business it supports and revealing where improvements are needed. The key to success is to track the right metrics for your app.
+
+
+These application performance metrics, commonly known as key performance indicators (KPIs), are a quantitative measure of how effectively the organization achieves the business objectives. Capturing the right metrics will give you a comprehensive report and powerful insights into ways to improve your application.
+
+Below are 10 core application performance metrics that developers should track.
+
+1. CPU usage
+CPU usage affects the responsiveness of an application. High spikes in CPU usage might indicate several problems. Specifically, this suggests the application is busy spending time on computing, causing the responsiveness of an application to degrade. High spikes in usage should be considered a performance bug because it means the CPU has reached its usage threshold.
+
+2. Memory usage
+Memory usage is also an important application performance metric. High memory usage indicates high resource consumption in the server. When tracking an application's memory usage, keep an eye on the number of page faults and disk access times. If you have allocated inadequate virtual memory, then your application is spending more time on thrashing than anything else.
+
+THIS ARTICLE IS PART OF
+
+What is APM? Application performance monitoring guide
+Which also includes:
+5 benefits of APM for businesses
+APM vs. observability: Key differences explained
+Explore the 2022 application performance monitoring market
+3. Requests per minute and bytes per request
+Tracking the number of requests your application's API receives per minute can help determine how the server performs under different loads. It's equally important to track the amount of data the application handles during every request. You might find that the application receives more requests than it can manage or that the amount of data it is forced to handle is hurting performance.
+
+4. Latency and uptime
+Latency -- usually measured in milliseconds -- refers to the delay between a user's action on an application and the response of the application to that action. Higher latency has a direct effect on the load time of an application. You should take advantage of a ping service to test uptime. These services can be configured to run at specific intervals of time to determine whether an application is up and running.
+
+Uptime Institute uptime guarantees
+Uptime guarantees are one way to differentiate data center tiers.
+5. Security exposure
+You should ensure that both your application and data are safe. Determine how much of the application is covered by security techniques and how much is exposed and unsecure. You should also have a plan in place to determine how much time it takes -- or might take -- to resolve certain security vulnerabilities.
+
+6. User satisfaction/Apdex scores
+Application Performance Index (Apdex) is an open standard that measures web applications' response times by comparing them against a predefined threshold. It's calculated as the ratio of satisfactory to unsatisfactory response times. The response time is the time taken by an asset to be returned to the requestor after being requested.
+
+Here's an example: Assume that you've defined a time threshold of T. Hence, all responses completed in T or less time are considered to have satisfied the user. On the contrary, responses that have taken more than T seconds are considered to have dissatisfied the user.
+
+Apdex defines three types of users based on user satisfaction:
+
+Satisfied. This rating represents users who experienced satisfactory or high responsiveness.
+Tolerating. This rating represents users who have experienced slow but acceptable responsiveness.
+Frustrated. This rating represents users who have experienced unacceptable responsiveness.
+You can calculate the Apdex score with the following formula, where SC denotes satisfied count, TC denotes tolerating count, FC denotes frustrated count and TS denotes total samples:
+
+Apdex = (SC + TC/2 + FC × 0)/TS
+
+Assuming a data set of 100 samples, where you've set a performance objective of 5 seconds or better, suppose 65 are below 5 seconds, 25 are between 5 and 10 seconds and the remaining 10 are above 10 seconds. With these parameters you can determine the Apdex score as follows:
+
+Apdex = (65 + (25/2) + (10 × 0))/100 = 0.77
