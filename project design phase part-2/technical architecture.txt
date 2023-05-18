@@ -1,0 +1,103 @@
+
+Introduction
+In a fast-paced digital world where new technical innovations flood the market every year, businesses need to act quickly to keep up with the competition. However, adopting random technologies without knowing how they will create more value, in the long run, can have detrimental effects on a business. In addition, cloud computing, microservices, and distributed systems are adding another level of complexity to the IT landscape. All these factors combined have created a growing need for skilled IT architects.
+
+IT architecture aims to align the business strategy with new technological solutions and consists of various disciplines ranging from strategic to highly technical. One that fits into the latter category is technology architecture as it mainly focuses on the design and documentation of software applications. Thus, technical architects create blueprint schematics of technical solutions making sure that new products or systems meet specified requirements.
+
+Through this focus on detail and the clear rules that are defined in technology architecture, new software solutions can be successfully delivered by developing teams and easily connect with the existing systems of a company once they’re implemented. Working with technical architects ensures that developers create products that fit into the computer architecture and create the desired value for a business. It also saves companies from major headaches that are caused by system noncompliance.
+
+ 
+
+What does technical architecture mean?
+Technical Architecture (TA) is a form of IT architecture that is used to design computer systems. It involves the development of a technical blueprint with regard to the arrangement, interaction, and interdependence of all elements so that system-relevant requirements are met.
+
+Throughout the past decade, architecture has become a broadly used term in the context of information technology. This doesn’t come as a surprise considering how most companies had to redesign their IT landscape to adopt digital trends like cloud computing and software as service (SaaS). This digital transition required not only skilled developing teams but first and foremost IT architects. In their roles as IT strategists and planners, they map out a target architecture and make sure that all IT decisions align with business goals and requirements.    
+
+But IT architecture encompasses a variety of different roles and disciplines that are sometimes difficult to tell apart. This is largely due to the highly dynamic nature of IT, and its widespread adoption throughout all industries and businesses that have developed their own practices. In general, there’s a differentiation between enterprise architecture, solution architecture, and technology architecture. In order to understand what technology architecture means, it’s helpful to examine the term architecture on its own.
+
+At its core, the term architecture describes the formation of a structure by strategically assembling single components. In this process of assembling, the architect has to adhere to certain rules or requirements like legal constraints, financial constraints, or scientific laws. In the world of technology architecture design, the focus lies on technology limitations, meaning that a technology architect makes sure that a new application is compatible with the existing technology at a company by specifying things like the communications network or hardware that it uses.
+
+ 
+
+The difference between enterprise architecture and technical architecture
+When it comes to the various disciplines in IT architecture, the difference between enterprise architecture (EA) and technical architecture (TA) can be difficult to grasp from an outside perspective. Even though both follow the same overall goal – which is maximizing the value that a company can get out of using the proper technology – they involve different scopes and skill sets. They also don’t stand alone or opposed to each other but form a synergy and thus are equally important to the success of a business.
+
+Enterprise Architecture can be defined as a strategic planning initiative that determines the overall IT direction of a company. By taking all entities of an enterprise into account, including its stakeholders, customers, teams, data, and technology, it creates a visual blueprint of a target architecture that is perfectly aligned with business interests and goals. In this process, EA takes inventory of all existing applications and their interdependencies in order to identify obsolete technologies, redundancies, and new business opportunities.
+
+Since EA provides the IT roadmap and focuses on the big picture, it doesn’t go much into technical detail. And that is where TA comes into play. Technical architects focus on specific technologies and have a deep, ground-level understanding of their functions and limitations. By crafting technical blueprints for real-life IT solutions, they provide guidance to development teams during a project lifecycle. They have a low focus on how solutions fit into a company’s overall strategy, but a high focus on how they fit into existing computer systems.
+
+However, this doesn’t mean that technical architects operate in a bubble that is removed from the strategic mindset. They not only work with developers but also with less technical IT specialists like solution architects. The latter often serves as a middleman between enterprise architecture and technical architecture, synthesizing business strategy into real-life IT solutions that are then passed on to the technical architect. For businesses with a complex IT infrastructure, all three roles are key to successful transformations. 
+
+Enterprise Architects on IT Priorities for 2022
+REPORT
+
+Enterprise Architects on IT Priorities for 2022
+Gartner 12 Rules of IT Cost Management
+REPORT
+
+Gartner 12 Rules of IT Cost Management
+Faster Time to Value with LeanIX EAM
+POSTER
+
+Faster Time to Value with LeanIX EAM
+LeanIX named a leader in SPARK Matrix: EA Tools, 2021
+REPORT
+
+LeanIX named a leader in SPARK Matrix: EA Tools, 2021
+LeanIX M&A Survey 2021
+REPORT
+
+LeanIX M&A Survey 2021
+4 Steps to M&A Success with LeanIX
+POSTER
+
+4 Steps to M&A Success with LeanIX
+Enterprise Architecture Success Kit
+WHITE PAPER
+
+Enterprise Architecture Success Kit
+Enterprise Architecture Roadmap
+POSTER
+
+Enterprise Architecture Roadmap
+See all free resources
+The role of a technical architect
+After enterprise architects and solution architects have designed a strategy and decided which IT solutions should be implemented, they delegate specific tasks to technical architects. In their role as IT specialists, they have the most hands-on approach and in-depth proficiency in one single technology. That’s why they’re often named after their area of knowledge, e.g., SAP, Java, or Python architect. Just like data or information architects, they fall under the umbrella of domain architects.
+
+But what does the day-to-day of a technical architect look like? Since every project is different, technical architects can have a variety of responsibilities that span from producing documents and diagrams for their technical team to informing stakeholders on potential threats and making technology recommendations. The majority of their time goes into creating an architecture implementation plan by gathering requirements and breaking down the project into manageable chunks. During project execution, they closely monitor the progress and keep solution architects informed.
+
+Depending on the size of the business, technical architects can manage large teams of developers and IT specialists. They act as technical project managers who analyze design specifications for single applications and therein define best practices. From a top-down perspective, technical architects are the closest to the end-user, so they are the ones that ensure the usability and functionality of the respective technology. This involves tracking its effectiveness by conducting post-execution reviews with solution architects. 
+
+Given the important part that technical architects play in the digital transformation process, they need to have a skill set that matches their responsibilities. Like most IT specialists, technical architects have a degree in computer science, computer engineering, or software development.
+
+But in-depth knowledge about applications, quality standards, and legislation isn’t enough. They’re also required to have good interpersonal skills to collaborate with stakeholders and team members. And since IT projects usually have tight deadlines, technical architects also need to be able to prioritize and anticipate problems and solutions.
+
+
+5 useful technical architecture diagrams
+In TA, the use of a technical architecture diagram is common practice as it provides a much-needed bird’s eye view of a company’s IT infrastructure. It usually shows all the components of a system as well as its interdependencies.
+
+These high-level architecture diagrams serve different purposes and make it easier for IT specialists to come up with the right technology solution design. They also help fill the gaps in communication between technical and non-technical staff and illustrate how changes will impact the whole system. Below are 5 frequently used TA diagrams.  
+
+Application architecture diagram
+As the name suggests, the application architecture diagram focuses on the applications within a computer system and how they interact with databases and each other. If an application needs to be replaced, upgraded, or merged with other applications, technical architects can quickly assess how this will affect the system. With a single glance, they see which applications reside in shared container clusters, what their interactions and dependencies look like, and how the desired state of architecture can be reached.
+
+Integration architecture diagram
+While the application architecture diagram deals with the “What” in relation to the system, the integration architecture diagram focuses on the “How” by emphasizing integration protocols between single components. This diagram comes in handy when an external partner system needs to be integrated into the existing one. With this diagram, technical architects are forced to think about how services are organized and how they’re exposed. If they’re exposed externally, it helps them decide on how they’ll be secured and tracked during and after the integration.
+
+Deployment architecture diagram
+In the deployment architecture diagram, IT specialists depict the network boundaries as well as the infrastructure of hardware and software components. Since this diagram also tends to specify the quantity and size of components, it both addresses the questions “Where” and “How many”. In practice, the deployment architecture diagram is used to facilitate the upgrading of services or applications. This might be necessary when existing resources have become unable to handle the increasing scale and load caused by a growing number of users.
+
+DevOps architecture diagram
+This diagram is used to optimize processes and deployment flows. By not only looking at the components but also at their processes, technical architects can identify weaknesses within the deployment process like non-standardized practices or bottlenecks. The diagram makes technical architects examine what kind of applications are deployed, what the current process flow looks like, and how configurations are managed across applications. Once these areas of improvement or integration points are uncovered, it’s easier to implement new tools.
+
+Data architecture diagram
+With a data architecture diagram, technical architects visualize how data is collected, stored, processed, and used. It also helps them capture the flow of data between all the components that make up a system. Nowadays, businesses deal with an increasing amount of data that can quickly slow down the system or cause even bigger issues. A data architecture diagram is the first step to optimizing data collection and storage as it reveals where upgrades are needed and where costs can be lowered.
+
+ 
+
+Conclusion
+In the world of IT architecture, technical architects have the most hands-on role when it comes to the implementation of IT solutions. They focus on specific technologies and make sure that they fit into existing computer systems and meet all technological, security, functional, and business requirements. By employing data architecture diagrams, they depict the intricacies of a computer system and facilitate the communication between developers and other teams involved in the process.
+
+Since technical architecture is less concerned with the strategy of a business, it is complemented by the work produced in enterprise architecture. The latter determines the overall IT direction and designs a target architecture that aligns with business objectives.
+
+However, EA relies on TA for the proper implementation and delivery of new technology solutions. In many cases, there is also a solution architect that acts as a middleman between EA and TA. A collaboration between all three roles is key to bringing a complex IT project to fruition.

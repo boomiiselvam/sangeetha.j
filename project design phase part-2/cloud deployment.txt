@@ -1,0 +1,30 @@
+Cloud deployment
+What is cloud deployment?
+Cloud deployment is the process of deploying an application through one or more hosting models—software as a service (SaaS), platform as a service (PaaS) and/or infrastructure as a service (IaaS)—that leverage the cloud. This includes architecting, planning, implementing and operating workloads on cloud.
+
+What are the business benefits of cloud deployment?
+With an effective cloud deployment model, an organization achieves numerous benefits, including:
+
+Faster and simplified deployments. Automate builds that deploy code, databases and application releases, including resource provisioning.
+Cost savings. Control costs using consumption-based pricing and eliminate capex-heavy on-premises environments.
+Platform for growth. Leverage the global infrastructure provided by cloud service providers (CSPs) to seamlessly expand the business into other geographies.
+New digital business models. Exploit the continuous release of features and services by CSPs, incubate new technologies and innovate digital business models.
+Business resiliency. Architect for the availability and fault-tolerance CSPs offer and ensure disaster recovery and business continuity of applications to make the business resilient.
+Agility and scalability. Use autoscaling and scalability to meet peak demands of the business without provisioning for excess capacity.
+Geographic reach. Access applications from any location, on any device, leveraging the connectivity backbone of CSPs.
+Operational efficiency. Use the inherent automation enabled by cloud to increase operational efficiency and reduce human effort.
+A competitive edge. Leverage infrastructure as code and development, security and operations (DevSecOps) to reduce the time to market for new features and stay ahead of the competition.
+Empowered users. Increase productivity by empowering users with self-service options on cloud, such as portals, DevOps pipelines and executive and operational dashboards.
+What are some challenges in deploying applications to the cloud?
+Some key challenges when migrating applications range from high CapEx for hosting infrastructure to slower deployments, complex and costly migrations, insufficient monitoring methodologies, complex system integrations, dynamic and seasonal workloads, lock-in periods for infrastructure hosting and with application vulnerabilities. 
+
+To address these challenges, look for the following in a cloud services provider:
+
+A cost-saving pay-per-use model
+Rapid provisioning of systems
+Best-in-class technical operations
+Self-services for non-production systems
+Transparent metering and resource inspection
+High-availability solutions integrated with software-as-a-service options, auto-scaling, infrastructure flexibility and portability
+Managed cloud platform security
+A robust cloud management platform

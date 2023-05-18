@@ -1,0 +1,41 @@
+Frameworks are about more than just creating a development environment. They help to define a set of standards that programmers can follow when working collectively. When you choose a certain framework, you adopt the specific tools and methodologies associated with that framework. This also means you must be mindful of your choice, as you may end up with processes that don't fit the needs of your project or the developers involved.
+
+
+Some development frameworks are proprietary, which means they require developers to use closed-source tools or binaries, and full functionality often comes at a licensing cost. Thankfully, there are many open source versions of today's major development frameworks that developers can easily access. This allows them to test a framework's capabilities, get comfortable with it and determine its suitability for their particular project without a cost commitment. They may even be able to see a team project through without having to commit to a license.
+
+The open source ecosystem offers an array of valuable development tools, such as Git, Chef and Ansible. However, there are also a variety of development frameworks that help programmers to develop complex applications quickly. Here is a list of nine tried-and-true open source frameworks for development.
+
+Spring Boot
+If you're a Java programmer, the Spring Boot framework is an easier option because it is built on Spring which is widely used to develop Java-based web apps. Java is a notoriously verbose language that requires a fairly large amount of code in order to implement simple tasks. To compensate for this, Spring Boot generates common boilerplate code configurations to simplify the process.
+
+Spring Boot automatically starts an embedded servlet container for your Java app, which makes it easy to test the application during the development process. However, the framework doesn't provide developers with much control and may increase deployment size with unnecessary dependencies.
+
+Django
+In many respects, Django is to Python what Spring Boot is to Java. It is also an open source framework for development that removes much of the manual work needed to write and configure code. It provides rapid development, is easy to set up and has a strong support base. However, some top complaints include that it is too monolithic and not meant for small-scale projects.
+
+AngularJS
+AngularJS's creators say this framework is what HTML would have been if it was designed for web development. AngularJS helps developers create modern, dynamic web apps with a Model-View-Controller design (MVC) pattern. It is well suited for localizing website content according to a visitor's language preferences. It also allows developers to add automated user input validation without large, hand-written blocks of code. However, some say it is not easy to learn, as some of its features and supporting documentation can be difficult to navigate.
+
+Angular
+Angular should not be confused with AngularJS -- while developed by the same team, it is different in key areas. Angular is a newer incarnation of AngularJS, although not quite yet a complete replacement for it. Although the Angular developers encourage AngularJS users to migrate, they will continue to support AngularJS through 2021.
+
+Angular uses a template-based approach to manage web application design, as opposed to AngularJS's MVC structure. Angular also uses TypeScript, a superset of JavaScript, rather than JavaScript. In general, most developers are likely well served to use Angular versus AngularJS, though the latter may be a better choice for programmers who need a simple way to develop JavaScript-centric web apps.
+
+Vue
+Vue is another open source development framework for JavaScript. A former Google engineer, who liked some AngularJS features but not others, developed it. It is sometimes described as a lightweight version of AngularJS. Rather than MVC, Vue uses a Model-View-ViewModel design concept.
+
+Some consider Vue to be a simpler development framework than AngularJS, as it offers a concise library and has less functionality enabled by default. However, developers can add plugins for most of the functionality they want. This makes Vue a good choice for novice programmers who value simplicity over advanced out-of-the-box functionality. 
+
+Apache Cordova
+The Apache Cordova framework streamlines the mobile application development process by enabling developers to define multiple deployment platforms to target from a single codebase. This means they can deploy mobile apps to different types of devices, platforms and OSes without manually tweaking code to run on each platform. Developers can also integrate both native and web-based functionality into the same app to create hybrid apps.
+
+React Native
+React Native is a leading option for native mobile app development. Originally developed by Facebook, React Native's top feature is that it enables developers to write code in JavaScript. However, it can automatically render the app as native iOS or Android code. This allows developers to create native mobile apps as if they were web apps, while still providing users the performance of a native app.
+
+React
+React is a good fit for developers that are comfortable with React Native, but want to stick with client-side JavaScript code. Developed by the same team as React Native, React uses the same design concepts, but deploys code as JavaScript regardless of the native code.
+
+If developers choose, they can take a React project and convert it to a React Native project. This benefits those that want to start out with JavaScript code deployment, but still want to take advantage of native platform features down the line.
+
+Bootstrap
+Bootstrap is an option for developers that build mobile applications, but prefer to use CSS to build functionality rather than JavaScript. While Bootstrap provides optional JavaScript support via plugins, it is first and foremost a CSS framework. It aims to prioritize development speed and application performance, while also making it easy to deploy a single CSS codebase across multiple platforms and browsers.
